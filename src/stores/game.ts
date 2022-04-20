@@ -37,7 +37,7 @@ export const useGameStore = defineStore({
       // Reset clicked cell state
       this.clicked = ''
 
-      // Reset continue state
+      // Reset count of found cells
       this.foundCount = 0
 
       // Double the items in default values
