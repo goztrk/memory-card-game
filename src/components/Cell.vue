@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { ref } from 'vue';
   import { useGameStore } from '../stores/game';
 
   const {row, column} = defineProps<{
@@ -17,8 +16,13 @@
 </script>
 
 <template>
-  <div class="cell" :class="gameStore.getCellClass(pos)" @click="handleCellClick">
-    <span v-if="gameStore.getCellClass(pos) !== 'close'">{{ gameStore.cells[pos] }}</span>
+  <div class="cell"
+   :class="gameStore.getCellClass(pos)"
+   @click="handleCellClick"
+  >
+    <span
+      v-if="gameStore.getCellClass(pos) !== 'close'"
+    >{{ gameStore.cells[pos] }}</span>
   </div>
 </template>
 
